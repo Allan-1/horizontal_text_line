@@ -14,26 +14,54 @@ and the Flutter guide for
 TODO: Put a short description of the package here that helps potential users
 know whether this package might be useful for them.
 
-## Features
+## Horizontal_Text_Line
+A simple flutter plugin to add text between a horizontal line
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## Screenshot
+
+![Image](image/image.jpeg)
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Install using:
+`flutter pub add horizontal_text_line`
 
-## Usage
+Import it in your file:
+`import 'package:horizontal_text_line/horizontal_text_line';`
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+## Example Usage
 
 ```dart
-const like = 'sample';
+Widget _LoginButtons(){
+  return Column(
+    children: [
+      ElevatedButton(onPressed: (){}, child: Text("Login")),
+      HorizontalTextLine(text: "Continue With", color: Colors.brown, height: 1.5),
+      ElevatedButton(onPressed: (){}, child: Text("Sign in with Google")),
+    ]
+  );
+}
+  ```
+
+## Api Options
+```dart
+  ///defines the text to be added
+  final String text;
+
+  /// defines the color for the lines
+  final Color color;
+  
+  /// defines the height for the lines
+  final double height;
+  
+  /// defines the padding on the right of the line
+  final double paddingRight;
+  
+  /// defines the padding on the the left of the line
+  final double paddingLeft;
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+You can contribute on this project on 	[github](https://github.com/Allan-1/horizontal_text_line)
+You can also follow me on [twitter](https://twitter.com/a0x001)
