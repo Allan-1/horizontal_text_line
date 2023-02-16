@@ -17,26 +17,29 @@ class HorizontalTextLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-            child: Container(
-          padding: EdgeInsets.only(right: paddingRight),
-          child: Divider(
-            color: color,
-            height: height,
-          ),
-        )),
-        Text(text),
-        Expanded(
-            child: Container(
-          padding: EdgeInsets.only(left: paddingLeft),
-          child: Divider(
-            color: color,
-            height: height,
-          ),
-        )),
-      ],
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Row(
+        children: [
+          Expanded(
+              child: Container(
+            padding: EdgeInsets.only(right: paddingRight),
+            child: Divider(
+              color: color,
+              height: height,
+            ),
+          )),
+          Text(text),
+          Expanded(
+              child: Container(
+            padding: EdgeInsets.only(left: paddingLeft),
+            child: Divider(
+              color: color,
+              height: height,
+            ),
+          )),
+        ],
+      ),
     );
   }
 }
