@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 
 void main() {
   testWidgets("Widget has two dividers and a text", (widgetTester) async {
-    await widgetTester.pumpWidget(HorizontalTextLine(
+    await widgetTester.pumpWidget(const HorizontalTextLine(
       text: "Or",
       color: Colors.brown,
       height: 2,
     ));
+    final textFinder = find.text("Or");
+    expect(textFinder, findsOneWidget);
   });
 }
