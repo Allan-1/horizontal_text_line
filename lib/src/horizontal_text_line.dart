@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 class HorizontalTextLine extends StatelessWidget {
   const HorizontalTextLine(
-      {Key? key, required this.height, required this.label})
+      {Key? key,  this.height = 1.0, required this.text, this.color = Colors.black})
       : super(key: key);
-  final String label;
+  final String text;
+  final Color color;
   final double height;
 
   @override
@@ -15,16 +16,16 @@ class HorizontalTextLine extends StatelessWidget {
             child: Container(
           padding: const EdgeInsets.only(right: 10),
           child: Divider(
-            color: Colors.black,
+            color: color,
             height: height,
           ),
         )),
-        Text(label),
+        Text(text),
         Expanded(
             child: Container(
           padding: const EdgeInsets.only(left: 10),
           child: Divider(
-            color: Colors.black,
+            color: color,
             height: height,
           ),
         )),
