@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 
 class HorizontalTextLine extends StatelessWidget {
   const HorizontalTextLine(
-      {Key? key,  this.height = 1.0, required this.text, this.color = Colors.black})
+      {Key? key,
+      this.height = 1.0,
+      required this.text,
+      this.color = Colors.black})
       : super(key: key);
   final String text;
   final Color color;
