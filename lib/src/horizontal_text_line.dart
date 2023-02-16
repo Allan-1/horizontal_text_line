@@ -5,11 +5,13 @@ class HorizontalTextLine extends StatelessWidget {
       {Key? key,
       this.height = 1.0,
       required this.text,
-      this.color = Colors.black})
+      this.color = Colors.black, this.paddingRight = 10.0, this.paddingLeft = 10.0})
       : super(key: key);
   final String text;
   final Color color;
   final double height;
+  final double paddingRight;
+  final double paddingLeft;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class HorizontalTextLine extends StatelessWidget {
       children: [
         Expanded(
             child: Container(
-          padding: const EdgeInsets.only(right: 10),
+          padding:  EdgeInsets.only(right: paddingRight),
           child: Divider(
             color: color,
             height: height,
@@ -26,7 +28,7 @@ class HorizontalTextLine extends StatelessWidget {
         Text(text),
         Expanded(
             child: Container(
-          padding: const EdgeInsets.only(left: 10),
+          padding: EdgeInsets.only(left: paddingLeft),
           child: Divider(
             color: color,
             height: height,
