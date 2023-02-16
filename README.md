@@ -16,7 +16,7 @@ A simple flutter plugin to add text between a horizontal line
 
 ## Screenshot
 
-![Image](image/image.jpeg)
+![Image](https://github.com/Allan-1/horizontal_text_line/blob/main/image/image.jpeg)
 
 ## Getting started
 
